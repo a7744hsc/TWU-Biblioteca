@@ -1,9 +1,20 @@
 package com.twu.biblioteca;
 
+import java.io.PrintStream;
+
 public class BibliotecaApp {
 
-    public static void main(String[] args) {
+    private void run(){
+        showWelcomeMessage("welcome",System.out);
+    }
 
-        System.out.println("Hello, world!");
+
+    private void showWelcomeMessage(String welcomeStr, PrintStream ps) {
+        ps.println(welcomeStr);
+    }
+
+    public static void main(String[] args) {
+       new BibliotecaApp().run();
     }
 }
+
