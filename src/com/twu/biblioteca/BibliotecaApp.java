@@ -3,18 +3,19 @@ package com.twu.biblioteca;
 import java.io.PrintStream;
 
 public class BibliotecaApp {
+    private Welcome welcome;
 
-    private void run(){
-        showWelcomeMessage("welcome",System.out);
+    private BibliotecaApp() {
+        welcome = new Welcome(System.out);
     }
 
-
-    private void showWelcomeMessage(String welcomeStr, PrintStream ps) {
-        ps.println(welcomeStr);
+    private void run(){
+        welcome.showWelcomeMessage();
     }
 
     public static void main(String[] args) {
        new BibliotecaApp().run();
+
     }
 }
 
