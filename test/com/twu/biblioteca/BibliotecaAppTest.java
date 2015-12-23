@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class ExampleTest {
+public class BibliotecaAppTest {
 
     @Before
     public void setupStreams() {
@@ -21,6 +21,6 @@ public class ExampleTest {
     @Test
     public void shouldPrintWelcomeToPrintStream()
     {
-        assertEquals(1, 1);
+
     }
 }
