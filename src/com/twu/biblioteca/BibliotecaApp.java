@@ -8,16 +8,17 @@ import java.util.List;
 
 public class BibliotecaApp {
     private Welcome welcome;
+    private LibraryController libController;
 
     public BibliotecaApp() {
+        List<Book> books = initializeBooks();
         welcome = new Welcome(System.out);
+        libController = new LibraryController(books,System.out);
     }
 
     private void run(){
-        List<Book> books = initializeBooks();
         welcome.showWelcomeMessage();
-
-
+        libController.showBooks();
     }
 
     public List<Book> initializeBooks(){

@@ -25,4 +25,10 @@ public class Book {
     public Integer getPublishYear() {
         return publishYear;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%-30s%-30s%s", name, author,publishYear);
+
+    }
 }
