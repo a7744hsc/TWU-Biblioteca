@@ -1,6 +1,8 @@
 package com.twu.biblioteca;
 
+import org.junit.Assert;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 import java.io.PrintStream;
 import java.util.List;
@@ -19,4 +21,13 @@ public class MenuTest {
         menu.showMenu();
         verify(printStream,times(1)).println(anyString());
     }
+
+    @Test
+    public void shouldReturnNumOfMenuItems(){
+
+        Menu menu = new Menu(null,System.out);
+        int numOfMenuItems = menu.getMenuSize();
+        assertEquals(1,numOfMenuItems);
+    }
+
 }

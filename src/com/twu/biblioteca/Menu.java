@@ -21,10 +21,15 @@ public class Menu {
     }
 
     public void showMenu(){
+        printStream.println("=========================== Main  Menu ===========================");
         for(int i=1;i<=menuItemBaseMap.keySet().size();i++){
             printStream.println(i+": "+menuItemBaseMap.get(i).getItemName());
         }
 
+    }
+
+    public Integer getMenuSize(){
+        return menuItemBaseMap.size();
     }
 
 

@@ -13,12 +13,13 @@ public class BibliotecaApp {
     public BibliotecaApp() {
         List<Book> books = initializeBooks();
         welcome = new Welcome(System.out);
-        libController = new LibraryController(books,System.out);
+        libController = new LibraryController(books,System.out,System.in);
     }
 
     private void run(){
         welcome.showWelcomeMessage();
         libController.showBooks();
+        libController.startInteraction();
     }
 
     public List<Book> initializeBooks(){
