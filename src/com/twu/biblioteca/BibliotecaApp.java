@@ -18,7 +18,7 @@ public class BibliotecaApp {
 
     private void run(){
         welcome.showWelcomeMessage();
-        libController.showBooks();
+       // libController.showBooks();
         libController.startInteraction();
     }
 

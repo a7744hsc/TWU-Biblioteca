@@ -21,30 +21,18 @@ public class LibraryController {
         this.bookList = bookList;
         this.printStream = printStream;
         this.inputStream = inputStream;
-        menu = new Menu(bookList,printStream);
+        menu = new Menu(bookList,printStream,inputStream);
         menuSize = menu.getMenuSize();
     }
 
-    public void showBooks(){
-        printStream.println();
-        printStream.println(String.format("%-30s%-30s%s", "Name", "Author","Year"));
-        printStream.println("==================================================================");
-        for(Book b : bookList){
-            printStream.println(b);
-        }
 
-    }
 
     public void startInteraction(){
-        printStream.println();
-        menu.showMenu();
         while(true){
+            printStream.println();
+            menu.showMenu();
             int uInput = getUserInput();
-//            if(uInput == menuSize)
-//                break;
-//            else {
-//
-//            }
+            menu.excuteMethod(uInput);
         }
     }
 

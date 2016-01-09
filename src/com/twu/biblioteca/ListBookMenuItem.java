@@ -19,8 +19,12 @@ public class ListBookMenuItem extends MenuItemBase {
 
     @Override
     void doAction() {
+        printStream.println();
+        printStream.println(String.format("%-30s%-30s%s", "Name", "Author","Year"));
+        printStream.println("==================================================================");
         for(Book b : bookList){
             printStream.println(b);
         }
+
     }
 }

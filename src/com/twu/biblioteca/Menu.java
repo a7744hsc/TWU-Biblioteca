@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.List;
@@ -11,11 +12,14 @@ import java.util.Map;
 public class Menu {
     private Map<Integer,MenuItemBase> menuItemBaseMap;
     private PrintStream printStream;
+    private InputStream inputStream;
 
-    public Menu(List<Book> bookList, PrintStream printStream) {
+    public Menu(List<Book> bookList, PrintStream printStream, InputStream inputStream) {
         this.printStream = printStream;
+        this.inputStream = inputStream;
         menuItemBaseMap = new HashMap<>();
         menuItemBaseMap.put(1,new ListBookMenuItem("ListAllBooks",bookList,printStream));
+        menuItemBaseMap.put(2,new QuitMenuItem("Quit"));
 
 
     }
@@ -30,6 +34,10 @@ public class Menu {
 
     public Integer getMenuSize(){
         return menuItemBaseMap.size();
+    }
+
+    public void excuteMethod(int itemNum){
+        menuItemBaseMap.get(itemNum).doAction();
     }
 
 

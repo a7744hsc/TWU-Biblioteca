@@ -17,7 +17,7 @@ public class MenuTest {
     @Test
     public void shouldDisplayMenu(){
         PrintStream printStream=mock(PrintStream.class);
-        Menu menu = new Menu(null,printStream);
+        Menu menu = new Menu(null,printStream,System.in);
         menu.showMenu();
         verify(printStream,times(1)).println(anyString());
     }
@@ -25,7 +25,7 @@ public class MenuTest {
     @Test
     public void shouldReturnNumOfMenuItems(){
 
-        Menu menu = new Menu(null,System.out);
+        Menu menu = new Menu(null,System.out,System.in);
         int numOfMenuItems = menu.getMenuSize();
         assertEquals(1,numOfMenuItems);
     }
