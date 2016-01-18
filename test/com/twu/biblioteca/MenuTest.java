@@ -17,14 +17,14 @@ public class MenuTest {
         PrintStream printStream=mock(PrintStream.class);
         Menu menu = new Menu(null, null, printStream,System.in);
         menu.showMenu();
-        verify(printStream,times(7)).println(anyString());
+        verify(printStream,times(8)).println(anyString());
     }
 
     @Test
     public void shouldReturnNumOfMenuItems(){
         Menu menu = new Menu(null, null, System.out,System.in);
         int numOfMenuItems = menu.getMenuSize();
-        assertEquals(6,numOfMenuItems);
+        assertEquals(7,numOfMenuItems);
     }
 
 }

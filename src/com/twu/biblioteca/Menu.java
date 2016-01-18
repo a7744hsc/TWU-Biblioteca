@@ -23,7 +23,8 @@ public class Menu {
         menuItemBaseMap.put(3,new ReturnMenuItem("ReturnBooks",printStream,inputStream,bookList));
         menuItemBaseMap.put(4,new ListMovieMenuItem("ListMovies",printStream,movieList));
         menuItemBaseMap.put(5,new CheckOutMovieMenuItem("CheckOutMovies",printStream,inputStream,movieList));
-        menuItemBaseMap.put(6,new QuitMenuItem("Quit"));
+        menuItemBaseMap.put(6,new UserInfoMenuItem("UserInfo",printStream));
+        menuItemBaseMap.put(7,new QuitMenuItem("Quit"));
 
 
     }
