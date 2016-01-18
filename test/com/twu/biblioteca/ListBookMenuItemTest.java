@@ -42,4 +42,20 @@ public class ListBookMenuItemTest {
         verify(printStream,times(1)).println(b2);
 
     }
+
+    @Test
+    public void ShowNotDisplayBooksNotAvailable(){
+        List<Book> books = new ArrayList<Book>();
+        Book b1 = new Book("TestName","TestAuthor",1995);
+        books.add(b1);
+        Book b2 = new Book("TestName2","TestAuthor2",1995);
+        b2.setAvailable(false);
+        books.add(b2);
+        PrintStream printStream=mock(PrintStream.class);
+        ListBookMenuItem listBookMenuItem = new ListBookMenuItem("ListBook", books,printStream);
+        listBookMenuItem.doAction();
+        verify(printStream,times(1)).println(b1);
+        verify(printStream,times(0)).println(b2);
+
+    }
 }

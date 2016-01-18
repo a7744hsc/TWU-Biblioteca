@@ -23,7 +23,8 @@ public class ListBookMenuItem extends MenuItemBase {
         printStream.println(String.format("%-30s%-30s%s", "Name", "Author","Year"));
         printStream.println("==================================================================");
         for(Book b : bookList){
-            printStream.println(b);
+            if(b.getAvailable()==true)
+                printStream.println(b);
         }
 
     }

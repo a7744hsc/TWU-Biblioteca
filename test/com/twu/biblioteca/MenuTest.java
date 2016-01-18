@@ -24,7 +24,6 @@ public class MenuTest {
 
     @Test
     public void shouldReturnNumOfMenuItems(){
-
         Menu menu = new Menu(null,System.out,System.in);
         int numOfMenuItems = menu.getMenuSize();
         assertEquals(1,numOfMenuItems);
