@@ -27,9 +27,9 @@ public class CheckOutMenuItem extends MenuItemBase {
         String nameOfBook = getInput();
         Boolean checkResult = checkOutBook(books,nameOfBook);
         if(checkResult){
-            printStream.println("Check Out Success");
+            printStream.println("Thank you! Enjoy the book.");
         }else {
-            printStream.println("Chec Out Failed");
+            printStream.println("That book is not available.");
         }
 
     }

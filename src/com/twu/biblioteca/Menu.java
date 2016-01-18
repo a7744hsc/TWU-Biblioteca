@@ -20,7 +20,8 @@ public class Menu {
         menuItemBaseMap = new HashMap<>();
         menuItemBaseMap.put(1,new ListBookMenuItem("ListAllBooks",bookList,printStream));
         menuItemBaseMap.put(2,new CheckOutMenuItem("CheckOutBooks",printStream,inputStream,bookList));
-        menuItemBaseMap.put(3,new QuitMenuItem("Quit"));
+        menuItemBaseMap.put(3,new ReturnMenuItem("ReturnBooks",printStream,inputStream,bookList));
+        menuItemBaseMap.put(4,new QuitMenuItem("Quit"));
 
 
     }

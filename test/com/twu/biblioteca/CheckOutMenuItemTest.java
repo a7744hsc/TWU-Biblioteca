@@ -47,4 +47,20 @@ public class CheckOutMenuItemTest {
         assertEquals(false,b1.getAvailable());
         assertEquals(true,result);
     }
+
+    @Test
+    public void ShouldNotCheckOutBookNotAvailable(){
+        PrintStream printStream = mock(PrintStream.class);
+        InputStream inputStream = mock(InputStream.class);
+        List<Book> books= new ArrayList<Book>();
+        Book b1 = new Book("test1","testau",1995);
+        b1.setAvailable(false);
+        books.add(b1);
+        books.add(new Book("test2","testau",1998));
+
+        CheckOutMenuItem checkOutMenuItem=new CheckOutMenuItem("CheckOut",printStream,inputStream,books);
+        Boolean result = checkOutMenuItem.checkOutBook(books,"test1");
+        assertEquals(false,b1.getAvailable());
+        assertEquals(false,result);
+    }
 }
