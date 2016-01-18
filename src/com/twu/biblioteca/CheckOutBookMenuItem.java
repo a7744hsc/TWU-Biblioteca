@@ -8,13 +8,13 @@ import java.util.Scanner;
 /**
  * Created by hchan on 1/9/16.
  */
-public class CheckOutMenuItem extends MenuItemBase {
+public class CheckOutBookMenuItem extends MenuItemBase {
 
     private PrintStream printStream;
     private InputStream inputStream;
     private List<Book> books;
 
-    public CheckOutMenuItem(String itemName, PrintStream printStream, InputStream inputStream, List<Book> books) {
+    public CheckOutBookMenuItem(String itemName, PrintStream printStream, InputStream inputStream, List<Book> books) {
         super(itemName);
         this.printStream = printStream;
         this.inputStream = inputStream;

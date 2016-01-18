@@ -17,7 +17,7 @@ public class MenuTest {
         PrintStream printStream=mock(PrintStream.class);
         Menu menu = new Menu(null, null, printStream,System.in);
         menu.showMenu();
-        verify(printStream,times(6)).println(anyString());
+        verify(printStream,times(7)).println(anyString());
     }
 
     @Test
