@@ -14,14 +14,15 @@ public class Menu {
     private PrintStream printStream;
     private InputStream inputStream;
 
-    public Menu(List<Book> bookList, PrintStream printStream, InputStream inputStream) {
+    public Menu(List<Book> bookList, List<Movie> movieList, PrintStream printStream, InputStream inputStream) {
         this.printStream = printStream;
         this.inputStream = inputStream;
         menuItemBaseMap = new HashMap<>();
         menuItemBaseMap.put(1,new ListBookMenuItem("ListAllBooks",bookList,printStream));
         menuItemBaseMap.put(2,new CheckOutMenuItem("CheckOutBooks",printStream,inputStream,bookList));
         menuItemBaseMap.put(3,new ReturnMenuItem("ReturnBooks",printStream,inputStream,bookList));
-        menuItemBaseMap.put(4,new QuitMenuItem("Quit"));
+        menuItemBaseMap.put(4,new ListMovieMenuItem("ListMovies",printStream,movieList));
+        menuItemBaseMap.put(5,new QuitMenuItem("Quit"));
 
 
     }

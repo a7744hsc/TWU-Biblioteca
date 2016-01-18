@@ -11,17 +11,19 @@ import java.util.concurrent.Exchanger;
  */
 public class LibraryController {
     private List<Book> bookList;
+    private List<Movie> movieList;
     private PrintStream printStream;
     private InputStream inputStream;
     private Menu menu;
     private Integer menuSize;
 
 
-    public LibraryController(List<Book> bookList, PrintStream printStream, InputStream inputStream) {
+    public LibraryController(List<Book> bookList, List<Movie> movies, PrintStream printStream, InputStream inputStream) {
         this.bookList = bookList;
+        this.movieList = movies;
         this.printStream = printStream;
         this.inputStream = inputStream;
-        menu = new Menu(bookList,printStream,inputStream);
+        menu = new Menu(bookList,movieList,printStream,inputStream);
         menuSize = menu.getMenuSize();
     }
 

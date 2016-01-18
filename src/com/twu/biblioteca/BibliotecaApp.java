@@ -12,8 +12,9 @@ public class BibliotecaApp {
 
     public BibliotecaApp() {
         List<Book> books = initializeBooks();
+        List<Movie> movies = initializeMovies();
         welcome = new Welcome(System.out);
-        libController = new LibraryController(books,System.out,System.in);
+        libController = new LibraryController(books,movies,System.out,System.in);
     }
 
     private void run(){
@@ -40,6 +41,14 @@ public class BibliotecaApp {
             throw new RuntimeException("Open BookList Failed");
         }
         return books;
+    }
+
+    public List<Movie> initializeMovies(){
+        List<Movie> movies = new ArrayList<>();
+        movies.add(new Movie("Dirty Grandpa",2016,"Dan Mazer",8));
+        movies.add(new Movie("The 5th Wave",2016,"J Blakeson",8.1));
+        movies.add(new Movie("Daddy's Home ",2015,"Sean Anders",6.5));
+        return movies;
     }
 
     public static void main(String[] args) {
