@@ -13,13 +13,23 @@ public class User {
     private String email;
     private String address;
     private String phoneNum;
+    private String passwd;
 
-    public User(String libNum, String name, String email, String address, String phoneNum) {
+    public String getPasswd() {
+        return passwd;
+    }
+
+    public void setPasswd(String passwd) {
+        this.passwd = passwd;
+    }
+
+    public User(String libNum, String name, String email, String address, String phoneNum,String passwd) {
         this.libNum = libNum;
         this.name = name;
         this.email = email;
         this.address = address;
         this.phoneNum = phoneNum;
+        this.passwd = passwd;
     }
 
     public String getLibNum() {

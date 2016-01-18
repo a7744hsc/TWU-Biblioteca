@@ -8,12 +8,22 @@ public class Book {
     private String author;
     private Integer publishYear;
     private Boolean isAvailable;
+    private String checkOutby;
+
+    public String getCheckOutby() {
+        return checkOutby;
+    }
+
+    public void setCheckOutby(String checkOutby) {
+        this.checkOutby = checkOutby;
+    }
 
     public Book(String name, String author, Integer publishYear) {
         this.name = name;
         this.author = author;
         this.publishYear = publishYear;
         isAvailable = true;
+        checkOutby = null;
 
     }
 

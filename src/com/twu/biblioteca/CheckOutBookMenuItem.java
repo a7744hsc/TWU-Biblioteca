@@ -39,6 +39,7 @@ public class CheckOutBookMenuItem extends MenuItemBase {
             for(Book bk :books){
                 if(bk.getName().equals(nameOfBook)){
                     bk.setAvailable(false);
+                    bk.setCheckOutby(User.currentUser.getLibNum());
                     return true;
                 }
             }
