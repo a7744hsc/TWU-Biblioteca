@@ -7,11 +7,14 @@ public class Book {
     private String name;
     private String author;
     private Integer publishYear;
+    private Boolean isAvailable;
 
     public Book(String name, String author, Integer publishYear) {
         this.name = name;
         this.author = author;
         this.publishYear = publishYear;
+        isAvailable = true;
+
     }
 
     public String getName() {
@@ -24,6 +27,14 @@ public class Book {
 
     public Integer getPublishYear() {
         return publishYear;
+    }
+
+    public Boolean getAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(Boolean available) {
+        isAvailable = available;
     }
 
     @Override
