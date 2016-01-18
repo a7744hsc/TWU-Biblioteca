@@ -13,13 +13,14 @@ public class BibliotecaApp {
     public BibliotecaApp() {
         List<Book> books = initializeBooks();
         List<Movie> movies = initializeMovies();
+        List<User> users = new ArrayList<User>();
+        users.add(new User("1-234","admin","admin@tw.com","beijing","010-88888888"));
         welcome = new Welcome(System.out);
         libController = new LibraryController(books,movies,System.out,System.in);
     }
 
     private void run(){
         welcome.showWelcomeMessage();
-       // libController.showBooks();
         libController.startInteraction();
     }
 
